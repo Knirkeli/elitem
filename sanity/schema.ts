@@ -77,3 +77,4 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     allPosts,
   ],
 };
+//her legger vi inn alle schemaene våre, både dokumenter og blokker.
