@@ -11,6 +11,11 @@ export const projectId = assertValue(
   "Missing NEXT_PUBLIC_SANITY_PROJECT_ID environment variable"
 );
 
+export const sanityApiReadToken = assertValue(
+  process.env.SANITY_API_READ_TOKEN,
+  "Missing SANITY_API_READ_TOKEN environment variable"
+);
+
 export const useCdn = false;
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
