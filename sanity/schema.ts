@@ -73,7 +73,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     timelinesOne,
     cta1,
     logoCloud1,
-    faqs,S
+    faqs,
     allPosts,
   ],
 };
+//her legger vi inn alle schemaene våre, både dokumenter og blokker.
