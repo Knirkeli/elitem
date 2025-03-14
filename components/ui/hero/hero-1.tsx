@@ -22,7 +22,7 @@ export default function Hero1({
     <div className="relative w-full h-screen dark:bg-background pt-20 lg:pt-40 -mt-20">
       <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 gap-10">      
           {image && image.asset?._id && (
-            <div className="relative w-full h-full h-screen lg:h-full">
+            <div className="relative w-full h-full h-screen">
             <Image
               className="absolute inset-0 object-cover w-full h-full opacity-0 animate-fade-up [animation-delay:500ms]"
               src={urlFor(image).url()}
