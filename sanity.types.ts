@@ -74,15 +74,6 @@ export type AllPosts = {
   colorVariant?: "background" | "primary" | "secondary" | "card" | "accent" | "destructive" | "muted";
 };
 
-export type FormNewsletter = {
-  _type: "form-newsletter";
-  padding?: SectionPadding;
-  colorVariant?: "background" | "primary" | "secondary" | "card" | "accent" | "destructive" | "muted";
-  stackAlign?: "left" | "center";
-  consentText?: string;
-  buttonText?: string;
-  successMessage?: string;
-};
 
 export type Faqs = {
   _type: "faqs";
@@ -814,8 +805,6 @@ export type Page = {
     _key: string;
   } & Faqs | {
     _key: string;
-  } & FormNewsletter | {
-    _key: string;
   } & AllPosts>;
   meta_title?: string;
   meta_description?: string;
@@ -905,7 +894,7 @@ export type Code = {
   highlightedLines?: Array<number>;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | AllPosts | FormNewsletter | Faqs | LogoCloud1 | Cta1 | Timelines1 | TimelineRow | Carousel2 | Carousel1 | GridRow | GridPost | PricingCard | GridCard | SplitInfo | SplitInfoList | SplitImage | SplitCard | SplitCardsList | SplitContent | SplitRow | SectionHeader | Hero2 | Hero1 | SectionPadding | ButtonVariant | ColorVariant | Link | BlockContent | Testimonial | Faq | Category | Post | Author | Page | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | AllPosts | Faqs | LogoCloud1 | Cta1 | Timelines1 | TimelineRow | Carousel2 | Carousel1 | GridRow | GridPost | PricingCard | GridCard | SplitInfo | SplitInfoList | SplitImage | SplitCard | SplitCardsList | SplitContent | SplitRow | SectionHeader | Hero2 | Hero1 | SectionPadding | ButtonVariant | ColorVariant | Link | BlockContent | Testimonial | Faq | Category | Post | Author | Page | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./app/sitemap.ts
 // Variable: pagesQuery
