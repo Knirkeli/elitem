@@ -19,21 +19,34 @@ export default function Hero1({
   links,
 }: Hero1Props) {
   return (
-    <div className="container dark:bg-background py-20 lg:pt-40">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="flex flex-col justify-center">
+    <div className="relative w-full h-screen dark:bg-background pt-20 lg:pt-40 -mt-20">
+      <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 gap-10">      
+          {image && image.asset?._id && (
+            <div className="relative w-full h-full h-screen">
+            <Image
+              className="absolute inset-0 object-cover w-full h-full opacity-0 animate-fade-up [animation-delay:500ms]"
+              src={urlFor(image).url()}
+              alt={image.alt || ""}
+              layout="fill"
+              placeholder={image?.asset?.metadata?.lqip ? "blur" : undefined}
+              blurDataURL={image?.asset?.metadata?.lqip || ""}
+              quality={100}
+            />
+            </div>
+          )}
+        <div className="absolute inset-0 flex flex-col justify-center p-4 lg:relative md:pt-10 pl-20 md:pl-50 lg:pl-20 z-1">
           {tagLine && (
             <h1 className="leading-[0] font-sans animate-fade-up [animation-delay:100ms] opacity-0">
               <span className="text-base font-semibold">{tagLine}</span>
             </h1>
           )}
           {title && (
-            <h2 className="mt-6 font-bold leading-[1.1] text-4xl md:text-5xl lg:text-6xl animate-fade-up [animation-delay:200ms] opacity-0">
+            <h2 className="mt-6 font-bold leading-[1.1] text-4xl md:text-5xl lg:text-6xl animate-fade-up [animation-delay:200ms] opacity-0 text-white">
               {title}
             </h2>
           )}
           {body && (
-            <div className="text-lg mt-6 animate-fade-up [animation-delay:300ms] opacity-0">
+            <div className="text-lg mt-6 animate-fade-up [animation-delay:300ms] opacity-0 text-white">
               <PortableTextRenderer value={body} />
             </div>
           )}
@@ -57,21 +70,9 @@ export default function Hero1({
             </div>
           )}
         </div>
-        <div className="flex flex-col justify-center">
-          {image && image.asset?._id && (
-            <Image
-              className="rounded-xl animate-fade-up [animation-delay:500ms] opacity-0"
-              src={urlFor(image).url()}
-              alt={image.alt || ""}
-              width={image.asset?.metadata?.dimensions?.width || 800}
-              height={image.asset?.metadata?.dimensions?.height || 800}
-              placeholder={image?.asset?.metadata?.lqip ? "blur" : undefined}
-              blurDataURL={image?.asset?.metadata?.lqip || ""}
-              quality={100}
-            />
-          )}
-        </div>
       </div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-[#01030f] to-[#313233] via-transparent via-300% xl:via-100%"></div>
+
     </div>
   );
 }
