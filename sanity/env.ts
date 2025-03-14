@@ -3,12 +3,12 @@ export const apiVersion =
 
 export const dataset = assertValue(
   process.env.NEXT_PUBLIC_SANITY_DATASET,
-  "production"
+  "Missing NEXT_PUBLIC_SANITY_DATASET environment variable"
 );
 
 export const projectId = assertValue(
   process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  "qjumpgd0"
+  "Missing NEXT_PUBLIC_SANITY_PROJECT_ID environment variable"
 );
 
 export const useCdn = false;
