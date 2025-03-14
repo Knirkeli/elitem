@@ -73,7 +73,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     timelinesOne,
     cta1,
     logoCloud1,
-    faqs,S
+    faqs,
     allPosts,
   ],
 };
