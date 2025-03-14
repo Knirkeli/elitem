@@ -16,6 +16,7 @@ export const sanityApiReadToken = assertValue(
   "Missing SANITY_API_READ_TOKEN environment variable"
 );
 
+
 export const useCdn = false;
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
