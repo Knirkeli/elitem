@@ -1,5 +1,7 @@
 // export const apiVersion =
-//   process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-10-31";
+//   process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2025-03-24";
+
+  
 
 // export const dataset = assertValue(
 //   process.env.NEXT_PUBLIC_SANITY_DATASET,
@@ -21,8 +23,9 @@
 //   return v;
 // }
 
+
 export const apiVersion =
-  process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-10-31";
+  process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2025-03-24";
 
 export const dataset = assertValue(
   process.env.NEXT_PUBLIC_SANITY_DATASET,
@@ -36,8 +39,10 @@ export const projectId = assertValue(
 
 export const useCdn = false;
 
-export const resendApiKey = process.env.RESEND_API_KEY || "dummy_value";
-export const resendAudienceId = process.env.RESEND_AUDIENCE_ID || "dummy_value";
+export const siteUrl = assertValue(
+  process.env.NEXT_PUBLIC_SITE_URL,
+  "Missing environment variable: NEXT_PUBLIC_SITE_URL"
+);
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
   if (v === undefined) {
