@@ -24,9 +24,6 @@ const nextConfig = {
       },
     ],
   },
-  devIndicators: {
-    port: 3000,
-  },
 };
 
 export default nextConfig;
