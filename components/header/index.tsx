@@ -6,18 +6,18 @@ import { ModeToggle } from "@/components/menu-toggle";
 
 const navItems = [
   {
-    label: "Home",
+    label: "Hjem",
     href: "/",
     target: false,
   },
   {
-    label: "Blog",
-    href: "/blog",
+    label: "Tjenester",
+    href: "/tjenester",
     target: false,
   },
   {
-    label: "About",
-    href: "/about",
+    label: "Om oss",
+    href: "/om-oss",
     target: false,
   },
 ];

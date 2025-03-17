@@ -33,7 +33,7 @@ export default function GridRow({
       {columns && columns?.length > 0 && (
         <div
           className={cn(
-            `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`,
+            `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`,   
             `xl:${stegaClean(gridColumns)}`
           )}
         >
