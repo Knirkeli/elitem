@@ -8,7 +8,12 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-    ]
+      {
+        source: '/_not-found',
+        destination: '/404',
+        permanent: false,
+      },
+    ];
   },
   images: {
     unoptimized: true,
